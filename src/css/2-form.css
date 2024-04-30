@@ -10,7 +10,7 @@
   height: 296px;
   background-color: #fff;
 }
-.modal-field {
+.js-modal-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -31,9 +31,6 @@
   height: auto;
 }
 
-.modal-input {
-  margin-bottom: 8px;
-}
 .js-input {
   display: block;
   color: #808080;
