@@ -37,22 +37,12 @@
 .js-input {
   display: block;
   color: #808080;
-  resize: none;
-  outline: transparent;
-  background-color: transparent;
 }
 .js-input:hover,
 .js-input:focus {
   color: black;
 }
-.js-input::placeholder {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
-}
+
 .js-modal-button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
