@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2-form</title>
+    <link rel="stylesheet" href="./css/2-form.css" />
   </head>
   <body>
     <form class="feedback-form" autocomplete="off">
-      <label>
-        Email
-        <input type="email" name="email" autofocus />
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="8"></textarea>
-      </label>
-      <button type="submit">Submit</button>
+      <div class="modal-field">
+        <label class="js-modal-label">
+          Email
+          <input class="js-input" type="email" name="email" autofocus />
+        </label>
+
+        <label class="js-modal-label">
+          Message
+          <textarea class="js-input" name="message" rows="6"></textarea>
+        </label>
+      </div>
+      <button class="js-modal-button" type="submit">Submit</button>
     </form>
 
     <script type="module" src="./js/2-form.js" defer></script>
