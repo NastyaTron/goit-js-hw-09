@@ -37,9 +37,6 @@
 .js-input {
   display: block;
   color: #808080;
-  resize: none;
-  outline: transparent;
-  background-color: transparent;
 }
 .js-input:hover,
 .js-input:focus {
