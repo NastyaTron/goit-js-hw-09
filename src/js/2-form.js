@@ -3,23 +3,27 @@ const formData = {
   message: '',
 };
 const form = document.querySelector('.feedback-form');
-formData.email = document.querySelector('input[type="email"]');
-formData.message = document.querySelector('textarea');
+const emailInput = document.querySelector('input[type="email"]');
+const messageInput = document.querySelector('textarea');
 
 document.addEventListener('DOMContentLoaded', () => {
   const storedData = localStorage.getItem('feedback-form-state');
   if (storedData) {
     const parsedData = JSON.parse(storedData);
-    formData.email.value = parsedData.email;
-    formData.message.value = parsedData.message;
+    emailInput.value = parsedData.email;
+    messageInput.value = parsedData.message;
   }
 });
 form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
-  if (!formData.email.value.trim() || !formData.message.value.trim()) {
+  if (!emailInput.value.trim() || !messageInput.value.trim()) {
     return alert('Fill please all fields');
   }
+  const formData = {
+    email: emailInput.value,
+    message: messageInput.value,
+  };
   console.log(formData);
   localStorage.removeItem('feedback-form-state');
   event.currentTarget.reset();

@@ -88,13 +88,7 @@ const imagesEl = images
 
 itemEl.innerHTML = imagesEl;
 
-const linksEl = document.querySelectorAll('a');
-
-linksEl.forEach(link => link.addEventListener('click', download));
-function download(event) {
-  event.preventDefault();
-}
 new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captioneDelay: 250,
+  captionDelay: 250,
 });
