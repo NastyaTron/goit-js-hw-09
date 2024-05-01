@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
-  if (!emailInput.value.trim() || !messageInput.value.trim()) {
+  if (!emailInput.value || !messageInput.value) {
     return alert('Fill please all fields');
   }
   const formData = {
