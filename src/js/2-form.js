@@ -20,16 +20,14 @@ function onFormSubmit(event) {
   if (!emailInput.value || !messageInput.value) {
     return alert('Fill please all fields');
   }
-  const formData = {
-    email: emailInput.value,
-    message: messageInput.value,
-  };
   console.log(formData);
   localStorage.removeItem('feedback-form-state');
-  event.currentTarget.reset();
+  form.reset();
 }
 form.addEventListener('input', onFormInput);
 function onFormInput(event) {
-  formData[event.target.name] = event.target.value;
+  const fieldName = event.target.name;
+  const fieldValue = event.target.value.trim();
+  formData[fieldName] = fieldValue;
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
